@@ -5,102 +5,91 @@
 		<title>D-squad Randomizer</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="html2canvas.js"></script>
-        <script src="FileSaver.js"></script>
-<style>
-    
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        -moz- box-sizing: border-box;
-        -webkit- box-sizing: border-box;
-        position: relative;
-    }
-    
-    body{
-        height: 100vh;
-        width: 100%;
-        overflow: hidden;
-        
-    }
-    
-    .header{
-        border-bottom: 1px solid #999;
-        width: 100%;
-        height: 15vh;
-        display: block;
-    }
-    
-    main{
-        width: 100%;
-        height: calc(85vh - 80px);
-        display: block;
-    }
-    
-    footer{
-        width: 100%;
-        height: 80px;
-        display: block;
-        background-color: #ff5757;
-    }
-    
-        canvas {
-            border: 1px solid black;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .button {
-            clear: both;
-            display: block;
-            
-        }
-        
-        #content {
-            background: rgba(100, 255, 255, 0.5);
-            padding: 50px 10px;
-        }
-    
-</style>
-        
-        
+        	<link rel="stylesheet" type="text/css" href="style.css">
+        	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        	<script src="html2canvas.js"></script>
+        	<script src="FileSaver.js"></script>
+		<style>
+
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			-moz- box-sizing: border-box;
+			-webkit- box-sizing: border-box;
+			position: relative;
+		    }
+
+		    body{
+			height: 100vh;
+			width: 100%;
+			overflow: hidden;
+
+		    }
+
+		    .header{
+			border-bottom: 1px solid #999;
+			width: 100%;
+			height: 15vh;
+			display: block;
+		    }
+
+		    main{
+			width: 100%;
+			height: calc(85vh - 80px);
+			display: block;
+		    }
+
+		    footer{
+			width: 100%;
+			height: 80px;
+			display: block;
+			background-color: #ff5757;
+		    }
+
+			canvas {
+			    border: 1px solid black;
+			    width: 100%;
+			    height: 100%;
+			}
+
+			.button {
+			    clear: both;
+			    display: block;
+
+			}
+
+			#content {
+			    background: rgba(100, 255, 255, 0.5);
+			    padding: 50px 10px;
+			}
+
+		</style>
 	</head>
 
 	<body>
+		<header class="header">
+		    <img/>
+		</header>
         
-        <div class="header">
-            <img/>
-        </div>
+		<main>
+            		<div class="head"></div>
+            		<div class="body"></div>
+            		<div class="legs"></div>
+        	</main>
+        	<footer>
+		    <div class="left"></div>
+		    <div class="middle"></div>
+		    <div class="right"></div>
+		    <div class="button">Run</div>
+		    <a id="downloadLnk" href="#" download="YourFileName.png">Download</a>
+		</footer>
         
-        <main>
-
-
-
-    
-            
-            <div class="head"></div>
-            <div class="body"></div>
-            <div class="legs"></div>
-            
-        </main>
-        
-        <footer>
-        
-            <div class="left"></div>
-            <div class="middle"></div>
-            <div class="right"></div>
-            <div class="button">Run</div>
-            <a id="downloadLnk" href="#" download="YourFileName.png">Download</a>
-            
-        </footer>
-        
-        <canvas id="canvas" width="1920" height="1080;"></canvas>
-
+        	<canvas id="canvas" width="1920" height="1080;"></canvas>
 	</body>
-    <script>
+    	
+	<script>
 //        var canvas = document.querySelector("canvas");
 //        var ctx = canvas.getContext("2d");
 //
