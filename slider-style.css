@@ -1,3 +1,9 @@
+.slider_wrap {
+    top: 50%;
+    transform: translate(-0%, -50%);
+    width: 100%;
+}
+
 .slider {
     margin: auto;
     width: 100%;
