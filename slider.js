@@ -40,4 +40,7 @@ $('.slider').each(function () {
 
 $('.filterBtn').click(function(){
     $('.btn').css({display: 'none'});
+    $('.sliderFullScreen').css({display: 'block'});
+    $('.btnFullscreenL').css({display: 'block'});
+    $('.btnFullscreenR').css({display: 'block'});
 });
