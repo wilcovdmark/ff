@@ -533,24 +533,22 @@
 
 <script src="saver.js"></script>
 <script>
-    $(".next").click(function() {
-        $(this).hide();
-        $(".btn").hide();
-        $(".random").hide();
-        $(".run").css('display', 'inline-block');
-        $(".save").css('display', 'inline-block');
-        $(".header button").hide();
-        $("#logo").show();
-    });
-
-
     $(document).ready(function() {
-        $(".loader").delay(2000).animate({
+	   
+	    //laadscherm uitfaden automatisch
+	$(".loader").delay(2000).animate({
             opacity: "0"
         });
-        $(".loader").click(function() {
+	    
+	    //laadscherm uitfaden met klik
+	$(".loader").click(function() {
             $(this).hide();
         });
+	    //naar filter
+	$(".next").click(function() {
+        	$('header').hide();
+        	$("nav").hide();
+    	});
     });
 
 </script>
