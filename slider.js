@@ -37,3 +37,10 @@ $('.slider').each(function () {
         width: imagesWidth + "px"
     });
 });
+
+$('.filterBtn').click(function(){
+    $('.btn').css({display: 'none'});
+    $('.sliderFullScreen').css({display: 'block'});
+    $('.btnFullscreenL').css({display: 'block'});
+    $('.btnFullscreenR').css({display: 'block'});
+});
