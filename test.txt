@@ -1,2 +1,7 @@
 kan ik files toevoegen?
+<<<<<<< HEAD
 jaha
+=======
+Klopt.
+Kkk
+>>>>>>> f835078702788560bc135193a7e30958bb36bbbf
