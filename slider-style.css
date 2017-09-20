@@ -138,13 +138,8 @@ main {
     right: 30px;
 }
 
-.btnFullscreenL{
-    top: -200px;
-}
-.btnFullscreenR{
-    top: -200px;
-}
 .sliderFullScreen{
+    display: none;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -158,6 +153,12 @@ main {
 .sliderFullScreen .window .images figure{
     height: 100vh!important;
     width: 100vw!important;
+}
+.btnFullscreenL{
+    top: -445px;
+}
+.btnFullscreenR{
+    top: -445px;
 }
 
 /*----- footer -----*/
