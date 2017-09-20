@@ -377,9 +377,7 @@
         });
 
         $(document).ready(function() {
-            $(".loader").delay(2000).animate({
-                opacity: "0"
-            });
+            $(".loader").delay(2000).fadeOut();
 
             $(".loader").click(function() {
                 $(this).hide();
