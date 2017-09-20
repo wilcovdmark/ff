@@ -510,19 +510,21 @@
         </main>
 
         <footer>
+            <nav class="nav1">
+                <img src="img/web/DSQUADRANDOMIZER.png">
 
-            <img src="img/web/DSQUADRANDOMIZER.png">
+                <div class="button next"><img src="icons/arrow-right.png"></div>
+                <div class="button random"><img src="icons/shuffle.png"></div>
+            </nav>
+            
+            <nav class="nav2">
+                <div class="button run"><img src="icons/refresh.png"></div>
+                <div class="button save">
+                    <a id="downloadLnk" href="#" download="YourFileName.png"><img src="icons/download.png"></a>
 
-            <div class="button next"><img src="icons/arrow-right.png"></div>
-            <div class="button random"><img src="icons/shuffle.png"></div>
-            <div class="button run"><img src="icons/refresh.png"></div>
-            <div class="button save">
-
-
-                <a id="downloadLnk" href="#" download="YourFileName.png"><img src="icons/download.png"></a>
-
-            </div>
-
+                </div>
+            </nav>
+        
         </footer>
 
         <canvas id="canvas" width="1920" height="1080;"></canvas>
@@ -536,18 +538,17 @@
     $(document).ready(function() {
 	   
 	    //laadscherm uitfaden automatisch
-	$(".loader").delay(2000).animate({
-            opacity: "0"
-        });
+	$(".loader").delay(2000).fadeOut()
 	    
 	    //laadscherm uitfaden met klik
 	$(".loader").click(function() {
-            $(this).hide();
+            $(this).fadeOut();
         });
 	    //naar filter
 	$(".next").click(function() {
-        	$('header').hide();
-        	$("nav").hide();
+        	$('.header').hide();
+        	$(".nav1").hide();
+            $(".nav2").show();
     	});
     });
 

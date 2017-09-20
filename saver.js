@@ -27,8 +27,9 @@ setTimeout(function () {
 
 downloadLnk.addEventListener('click', download, false);
 
-function download(this) {
+function download(event) {
+    event.preventDefault();
     var dt = canvas.toDataURL('image/png');
-    this.href = dt;
+    downloadLnk.href = dt;
 };
 
