@@ -28,53 +28,10 @@
                 <button>Filter</button>
                 <button>Background</button>
             </div>
-        <header>
-
-            
-        </header>    
-
-        
-
-        <main>
-
-            <!------------- slider ----------- -->
-            <div class="slider_wrap">
-                <div class="slider">
-                    <div class="window">
-                        <div class="images">
-                            <figure>
-                                <img src="img/hoofd/hoofdAlpay.png">
-                            </figure>
-
-                            <figure>
-                                <img src="img/hoofd/hoofdAndy.png">
-                            </figure>
-
-                            <figure>
-                                <img src="img/hoofd/hoofdJoey.png">
-                            </figure>
-
-                            <figure>
-                                <img src="img/hoofd/hoofdKevin.png">
-                            </figure>
-
-                            <figure>
-                                <img src="img/hoofd/hoofdLeslie.png">
-                            </figure>
-
-                            <figure>
-                                <img src="img/hoofd/hoofdNick.png">
-                            </figure>
-
-                            <figure>
-                                <img src="img/hoofd/hoofdSam.png">
-                            </figure>
-=======
->>>>>>> 27e71df2949d4b848fc1f07a24976a6bde558a07
 
             <main>
                 
-                <!------------- slider ----------- -->
+                <!------------- slider ------------->
 
                 <div class="slider_wrap">
                     <div class="slider">
@@ -312,7 +269,7 @@
                 </div>
 
 
-                <!------------ Filters / Achtergronden ----------- -->
+                <!------------ Filters / Achtergronden ------------->
 
                 <div class="slider sliderFullScreen">
                     <div class="window">
@@ -346,20 +303,17 @@
             </main>
 
             <footer>
-                <nav class="navSlider">
-                    <img src="img/web/DSQUADRANDOMIZER.png">
+                <img src="img/web/DSQUADRANDOMIZER.png">
 
-                    <div class="button next"><img src="icons/arrow-right.png"></div>
+                <div class="button next"><img src="icons/arrow-right.png"></div>
 
-                    <div class="button random"><img src="icons/shuffle.png"></div>
-                </nav>
-                <nav class="navFilter">
-                    <div class="button run"><img src="icons/refresh.png"></div>
+                <div class="button random"><img src="icons/shuffle.png"></div>
 
-                     <div class="button save">
-                        <a id="downloadLnk" href="#" download="YourFileName.png"><img src="icons/download.png"></a>
-                    </div>
-                </nav>
+                <div class="button run"><img src="icons/refresh.png"></div>
+
+                <div class="button save">
+                    <a id="downloadLnk" href="#" download="YourFileName.png"><img src="icons/download.png"></a>
+                </div>
             </footer>
 
             <canvas id="canvas" width="1920" height="1080;"></canvas>
@@ -369,7 +323,6 @@
     <script src="saver.js"></script>
     
     <script>
-   
         $(".next").click(function() {
             $(this).hide();
             $(".btn").hide();
@@ -381,10 +334,12 @@
         });
 
         $(document).ready(function() {
-            $(".loader").delay(2000).fadeOut();
+            $(".loader").delay(2000).animate({
+                opacity: "0"
+            });
 
             $(".loader").click(function() {
-                $(this).fadeOut();
+                $(this).hide();
             });
         });
     </script>
