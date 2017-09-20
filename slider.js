@@ -37,3 +37,7 @@ $('.slider').each(function () {
         width: imagesWidth + "px"
     });
 });
+
+$('.filterBtn').click(function(){
+    $('.btn').css({display: 'none'});
+});
