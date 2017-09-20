@@ -139,6 +139,10 @@ main {
     right: 30px;
 }
 
+.slider .sliderFullScreen:nth-child(2) {
+    top: -35px;
+    z-index: 10;
+}
 .sliderFullScreen{
     display: none;
     position: absolute;
