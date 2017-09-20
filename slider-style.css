@@ -1,9 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -moz- box-sizing: border-box;
+    -webkit- box-sizing: border-box;
+    position: relative;
+}
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+/*----- header -----*/
+
+.header {
+    width: 100%;
+    height: 15vh;
+    display: block;
+    position: relative;
+    background-image: url(img/web/header-image.png);
+    background-size: cover;
+    background-position: center center;
+}
+.header button {
+    width: 35%;
+    height: 35px;
+    line-height: 30px;
+    border: none;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-0%, -50%);
+    color: #fff;
+}
+.header button:nth-child(1) {
+    left: 8%;
+    background-color: #B22B2B;
+}
+.header button:nth-child(2) {
+    right: 8%;
+    background-color: #E24545;
+}
+
+/*----- logo -----*/
+
+#logo {
+    width: 20%;
+    height: auto;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500;
+}
+
+/*----- main -----*/
+
+main {
+    width: 100%;
+    height: calc(85vh - 100px);
+    display: block;
+    position: relative;
+}
+
+/*----- slider -----*/
+
 .slider_wrap {
     top: 50%;
     transform: translate(-0%, -50%);
     width: 100%;
 }
-
 .slider {
     margin: auto;
     width: 100%;
@@ -11,22 +84,19 @@
     position: relative;
     z-index: 15;
 }
-
 .slider:nth-child(2) {
     top: -35px;
     z-index: 10;
 }
-
 .slider:nth-child(3) {
     top: -53px;
     z-index: 20;
 }
-
 .slider .images {
+    margin-left: 250px;
     position: relative;
     height: 130px;
 }
-
 .slider figure {
     float: left;
     display: block;
@@ -35,12 +105,10 @@
     padding: 5px;
     left: -65vw;
 }
-
 .slider figure img {
     width: 100%;
     height: 100%;
 }
-
 .window {
     overflow: hidden;
     width: 130px;
@@ -48,7 +116,6 @@
     position: relative;
     margin: auto;
 }
-
 .btn {
     position: absolute;
     width: 50px;
@@ -58,18 +125,145 @@
     border-radius: 100%;
     cursor: pointer;
 }
-
 .btn img {
     width: 100%;
     height: 100%;
 }
-
 .btnLeft {
     top: -75px;
     left: 30px;
 }
-
 .btnRight {
     top: -75px;
     right: 30px;
+}
+
+.btnFullscreenL{
+    top: -200px;
+}
+.btnFullscreenR{
+    top: -200px;
+}
+.sliderFullScreen{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh!important;
+    width: 100vw!important;
+}
+.sliderFullScreen .window{
+    height: 100vh!important;
+    width: 100vw!important;
+}
+.sliderFullScreen .window .images figure{
+    height: 100vh!important;
+    width: 100vw!important;
+}
+
+/*----- footer -----*/
+
+footer {
+    width: 100%;
+    height: 100px;
+    display: block;
+    background-image: url(img/web/footer-image.png);
+    background-size: cover;
+    background-position: center center;
+    padding: 25px 15px;
+    position: relative;
+}
+footer img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*----- canvas -----*/
+
+canvas {
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.button {
+    clear: both;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    cursor: pointer;
+}
+.button img {
+    line-height: 50px;
+    text-align: center;
+    display: inline;
+    width: 60%;
+}
+.button.save {
+    float: right;
+    display: none;
+}
+.button.save a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.button.save a img {
+    display: inline;
+    line-height: 50px;
+    text-align: center;
+    width: 60%;
+}
+.button.run {
+    float: none;
+    display: none;
+}
+.button.next {
+    float: right;
+}
+#content {
+    background: rgba(100, 255, 255, 0.5);
+    padding: 50px 10px;
+}
+
+/*----- loader -----*/
+
+.loader {
+    position: absolute;
+    background-image: url(img/web/background-loader.png);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    z-index: 9999;
+    height: 100vh;
+}
+.loaderhide {
+    display: none;
+    z-index: -111;
+}
+
+.backgroundimg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 300;
+}
+
+/*----- popup -----*/
+
+.popUp {
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: none;
+    transform: translate(-50%, -50%);
+    z-index: 900;
 }
