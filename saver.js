@@ -1,18 +1,7 @@
-//canvas opzetten
 var canvas = document.querySelector("canvas");
 var ctx = canvas.getContext("2d");
 
-//canvas schalen
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas, false);
-
-function resizeCanvas() 
-{
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;        
-}
-
-
+var ctx = canvas.getContext('2d');
 
 setTimeout(function () {
 
@@ -20,18 +9,38 @@ setTimeout(function () {
         html2canvas(document.querySelector("main"), {
             canvas: canvas,
             allowTaint: true
+        }).then(function (canvas) {
+            console.log('Drew on the existing canvas');
         });
-        var dt = canvas.toDataURL('image/png');
-        document.getElementById("downloadLnk").href=dt
     }, false);
 
 }, 2000);
 
-//downloadLnk.addEventListener('click', download, false);
+function download() {
+    var dt = canvas.toDataURL('image/png');
+    this.href = dt;
+};
 
-//function download(event) {
-//    event.preventDefault();
-//    var dt = canvas.toDataURL('image/png');
-//    downloadLnk.href = dt;
-//};
+downloadLnk.addEventListener('click', download, false);
 
+(function () {
+    var canvas = document.getElementById('canvas'),
+        context = canvas.getContext('2d');
+
+    // resize the canvas to fill browser window dynamically
+    window.addEventListener('resize', resizeCanvas, false);
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        drawStuff();
+    }
+    resizeCanvas();
+
+    function drawStuff() {
+    }
+
+    setTimeout(explode, 2000);
+
+})();

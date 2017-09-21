@@ -21,6 +21,7 @@ body {
     background-image: url(img/web/header-image.png);
     background-size: cover;
     background-position: center center;
+    z-index: 100;
 }
 .header button {
     width: 35%;
@@ -32,14 +33,18 @@ body {
     top: 50%;
     transform: translate(-0%, -50%);
     color: #fff;
-}
-.header button:nth-child(1) {
-    left: 8%;
     background-color: #B22B2B;
 }
-.header button:nth-child(2) {
-    right: 8%;
+
+.header button:hover {
     background-color: #E24545;
+}
+
+.filterBtn {
+    left: 8%;
+}
+.bgBtn {
+    right: 8%;
 }
 
 /*----- logo -----*/
@@ -68,6 +73,7 @@ main {
     height: calc(85vh - 100px);
     display: block;
     position: relative;
+    background-color: white;
 }
 
 /*----- slider -----*/
@@ -173,6 +179,7 @@ footer {
     background-position: center center;
     padding: 25px 15px;
     position: relative;
+    z-index: 100;
 }
 footer img {
     position: absolute;
