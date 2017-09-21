@@ -27,11 +27,11 @@ setTimeout(function () {
 
 }, 2000);
 
-//downloadLnk.addEventListener('click', download, false);
+downloadLnk.addEventListener('click', download, false);
 
-//function download(event) {
-//    event.preventDefault();
-//    var dt = canvas.toDataURL('image/png');
-//    downloadLnk.href = dt;
-//};
+function download(event) {
+    event.preventDefault();
+    var dt = canvas.toDataURL('image/png');
+    downloadLnk.href = dt;
+};
 
