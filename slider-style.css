@@ -33,14 +33,13 @@ body {
     top: 50%;
     transform: translate(-0%, -50%);
     color: #fff;
+    background-color: #E24545;
 }
 .header button:nth-child(1) {
-    left: 8%;
-    background-color: #B22B2B;
+    left: 8%!important;
 }
 .header button:nth-child(2) {
     right: 8%;
-    background-color: #E24545;
 }
 
 /*----- logo -----*/
