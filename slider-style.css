@@ -21,6 +21,7 @@ body {
     background-image: url(img/web/header-image.png);
     background-size: cover;
     background-position: center center;
+    z-index: 100;
 }
 .header button {
     width: 35%;
@@ -173,6 +174,7 @@ footer {
     background-position: center center;
     padding: 25px 15px;
     position: relative;
+    z-index: 100;
 }
 footer img {
     position: absolute;
