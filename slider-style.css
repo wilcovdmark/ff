@@ -34,9 +34,7 @@ body {
     transform: translate(-0%, -50%);
     color: #fff;
     background-color: #E24545;
-}
-.header button:nth-child(1) {
-    left: 8%!important;
+    left: 8%;
 }
 .header button:nth-child(2) {
     right: 8%;
